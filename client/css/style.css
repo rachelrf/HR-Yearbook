@@ -119,3 +119,18 @@ body {
   clear: both;
 }
 
+.student {
+  margin-left: 10px;
+  margin-top: 10px;
+  width:400px;
+  height:265px;
+  position:relative;
+  float: left;
+  border-radius: 10px;
+}
+
+.flipped div {
+  opacity: 0.5;
+}
+
+

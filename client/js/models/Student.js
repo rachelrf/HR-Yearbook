@@ -7,7 +7,17 @@ var Student = Backbone.Model.extend({
     image: '',
     first: '',
     last: '',
-    nickname: ''
+    nickname: '',
   },
+
+  initialize: function() {
+  	this.set("nickname", generateNickname());
+  },
+
+  // flip: function() {
+  // 	console.log('FLIPPED!!!');
+  //   this.set('revealed', !this.get('revealed'));
+  //   return this;
+  // }
 
 });
