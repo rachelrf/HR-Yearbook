@@ -1,6 +1,6 @@
 var StudentEntryView = Backbone.View.extend({
 
-  template: _.template('<div class="student"><div class="student-element student-name"></div><div class="student-element student-photo" style="background-image: url(<%= image %>)"></div></div>'),
+  template: _.template($('#studentEntryTemplate').html()),
 
   events: {
     'mouseenter .student': 'flipstudent',

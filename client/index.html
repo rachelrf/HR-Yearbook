@@ -19,6 +19,25 @@
         <div id="page-content-container"></div>
     </div>
 
+    <!-- Templates -->
+    <script type="text/template" id="studentEntryTemplate">
+        <div class="student">
+            <div class="student-element student-name"></div>
+            <div class="student-element student-photo" style="background-image: url(<%= image %>)"></div>
+        </div>
+    </script>
+
+
+    <script type="text/template" id="messageForm">
+        <form name="messageForm" method="POST">
+          <div align="center">
+              Post to <%= name %>&#8217;s wall
+              <input type="text" id="messageBox">
+              <button type="button" id="sendButton">Submit</button>
+          </div>
+        </form>
+    </script>
+
     <!-- Library CDNs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
