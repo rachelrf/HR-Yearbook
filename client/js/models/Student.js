@@ -10,14 +10,11 @@ var Student = Backbone.Model.extend({
     nickname: '',
   },
 
-  initialize: function() {
+  initialize: function(studentData) {
+    console.log("STUDENT PARAM " + studentData.id);
   	this.set("nickname", generateNickname());
-  },
+    this.url = 'https://hr-yearbook.herokuapp.com/api/students/' + studentData.id;
+  }
 
-  // flip: function() {
-  // 	console.log('FLIPPED!!!');
-  //   this.set('revealed', !this.get('revealed'));
-  //   return this;
-  // }
 
 });

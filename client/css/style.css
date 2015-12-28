@@ -31,7 +31,30 @@ body {
   z-index: 100;
 }
 
+@-webkit-keyframes rotating {
+  from{
+      -webkit-transform: rotate(0deg);
+  }
+  to{
+      -webkit-transform: rotate(359deg);
+  }
+}
 
+.image:hover img {
+  -webkit-transform:scale(1.25); /* Safari and Chrome */
+}
+
+img {
+  float: left;
+  padding: 5px 5px 0px 5px;
+  height: 35px;
+  width: 35px;
+  -webkit-animation: rotating 4s linear infinite;
+}
+
+.title {
+  float: left;
+}
 
 .navbar-logo {
   width: 125px;
@@ -122,15 +145,48 @@ body {
 .student {
   margin-left: 10px;
   margin-top: 10px;
-  width:400px;
-  height:265px;
   position:relative;
   float: left;
   border-radius: 10px;
+  color: rgba(0, 0, 0, 0);
 }
 
-.flipped div {
+.student-photo {
+  z-index: 10;
+  width:400px;
+  height:265px;
+  border-radius: 10px;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.student-name {
+  z-index: 1;
+  float: left;
+  width:368px;
+  text-align: center;
+  font-weight: bold;
+  padding: 16px;
+  /*margin-top: 180px;*/
+  margin-top: 180px;
+  display: none;
+  color: #000;
+  background-color: #99ccff;
+}
+
+.student-name.flipped {
+  display: block;
+}
+
+.student-photo:hover {
   opacity: 0.5;
 }
 
+.student-photo.flipped {
+  
+  /*color: rgba(0, 0, 0, 1);*/
+  text-align: center;
+  vertical-align: bottom;
+}
 

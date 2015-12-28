@@ -8,6 +8,7 @@ var LandingView = Backbone.View.extend({
   	this.$el.html(new NavBarView);
 
     $('body').append(this.el);
+    
   }
 
 });

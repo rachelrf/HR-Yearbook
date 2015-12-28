@@ -3,9 +3,8 @@ var Students = Backbone.Collection.extend({
   model: Student,
   
   initialize: function (cohort) {
+    this.url = 'https://hr-yearbook.herokuapp.com/api/students?cohort=' + cohort;
     
-    this.url = 'https://hr-yearbook.herokuapp.com/api/students?cohort=' + cohort; 
-    this.populateCohort();
   },
 
   populateCohort: function() {
@@ -13,6 +12,7 @@ var Students = Backbone.Collection.extend({
     // The method incredibly useful (and flexible!) – you can even pass AJAX success/error/complete handlers to it!
     
     // use fetch to get the student data, and make a student model for each 
-    this.fetch(); 
+
+
   }
 });

@@ -1,7 +1,7 @@
 <html>
   <head>
     <div id='title'>
-        <h1>Hack Reactor Yearbook</h1>
+         <img src="./assets/hr-logo.png"><h1>Hack Reactor Yearbook</h1>
     </div>
     <!-- Local CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -14,6 +14,7 @@
   <body>
     <div id="app-container">
         <div id="info-window-container"></div>
+
         <div id="navbar-container"></div>
         <div id="page-content-container"></div>
     </div>
@@ -28,6 +29,9 @@
     <script src="js/utils/spinner.js"></script>
     <script src="js/utils/generateNickname.js"></script>
 
+    <!-- Router -->
+    <script src="js/router/AppRouter.js"></script>
+
     <!-- Models -->
     <script src="js/models/Student.js"></script>
 
@@ -38,12 +42,10 @@
     <script src="js/views/NavBarView.js"></script>
     <script src="js/views/InfoWindowView.js"></script>
     <script src="js/views/LandingView.js"></script>
+    <script src="js/views/ProfileView.js"></script>
     <script src="js/views/StudentEntryView.js"></script>
     <script src="js/views/StudentsView.js"></script>
     <script src="js/views/AppView.js"></script>
-
-    <!-- Router -->
-    <script src="js/router/AppRouter.js"></script>
 
     <!-- Entry -->
     <script src="js/app.js"></script>

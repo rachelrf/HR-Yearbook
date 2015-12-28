@@ -1,15 +1,15 @@
 var StudentEntryView = Backbone.View.extend({
 
-  template: _.template('<div class="student" style="background-image: url(<%= image %>)"></div>'),
+  template: _.template('<div class="student"><div class="student-element student-name"></div><div class="student-element student-photo" style="background-image: url(<%= image %>)"></div></div>'),
 
   events: {
     'mouseenter .student': 'flipstudent',
-    'mouseleave .student': 'unflipstudent'
+    'mouseleave .student': 'unflipstudent',
+    'click .student': 'studentProfile'
   },
 
   initialize: function() {
     this.render();
-    
   },
 
   render: function() {
@@ -22,18 +22,25 @@ var StudentEntryView = Backbone.View.extend({
     return this;
   },
 
+//
+
   flipstudent: function(e) {
     if (this.flipped) return;
-    console.log('mouseover working');
     this.flipped = true;
-    this.$el.addClass('flipped');
+    this.$el.children().children('.student-element').addClass('flipped');
+    var name = this.model.get('name').split(' ');
+    this.$el.children().children('.student-name').text(name[0] + ' "' + this.model.get('nickname') + '" ' + name[1]);
   },
 
   unflipstudent: function(e) {
-    console.log('mouseleave working');
     this.flipped = false;
-    this.$el.removeClass('flipped');
+    this.$el.children().children('.student-element').removeClass('flipped');
   },
+
+  studentProfile: function(e) {
+    var studentID = this.model.get('id');
+    window.location.hash = "student/" + studentID;
+  }
 
 
 });
