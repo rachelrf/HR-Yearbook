@@ -1,4 +1,4 @@
-## HR Yearbook
+## Yearbook
 
 ### Setup
 * Use `npm install` to grab all the required node modules
